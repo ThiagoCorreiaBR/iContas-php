@@ -26,9 +26,9 @@
             @else
                 <a href="/expenses/pay/{{ $expense->id }}" class="btn_2 bg-blue mb-4" style="border: none; width: 100%;">Paga</a>
             @endif
-            <form action="/expenses" method="post">
+            <form action="/expenses/{{$expenses->id}}" method="post">
                 @csrf
-                @method('put')
+                @method('post')
                 <div class="mb-3">
                     <label for="title">Título</label>
                     <input type="title" class="form-control" name="title" value="{{ $expense->title }}">
