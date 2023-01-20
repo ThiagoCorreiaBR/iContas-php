@@ -30,5 +30,5 @@ Route::middleware('auth')->group(function() {
     Route::get('/expenses/edit/{expense}', [ExpenseController::class, 'edit'])->name('expenses.edit');
     Route::get('/expenses/pay/{expense}', [ExpenseController::class, 'pay'])->name('expenses.pay');
     Route::get('/expenses/unpay/{expense}', [ExpenseController::class, 'unpay'])->name('expenses.unpay');
-    Route::post('/expenses/{expense}', [ExpenseController::class, 'update']);
+    Route::post('/expenses/{expense}', [ExpenseController::class, 'update'])->name('expenses.update');
 });
